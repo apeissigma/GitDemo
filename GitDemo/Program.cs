@@ -7,8 +7,6 @@ namespace GitDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello version control :)");
-
             Game myGame = new Game();
             myGame.Run();
         }

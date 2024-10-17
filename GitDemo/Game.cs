@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace GitDemo
 {
@@ -11,9 +12,16 @@ namespace GitDemo
 
         public void Run()
         {
-            Console.WriteLine("Welcome to the game");
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey(true);
+            WriteLine("Welcome to the game");
+
+            Write("\nEnter your name: ");
+            string name = ReadLine();
+            Player currentPlayer = new Player(name);
+
+            WriteLine($"\nLet's get started {currentPlayer.Name}!");
+
+            WriteLine("\nPress any key to exit...");
+            ReadKey(true);
         }
     }
 }
